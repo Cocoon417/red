@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/comicList.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/template-web.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html" class="back fa fa-angle-left"></a>
+        <span class="title">专题列表</span>
+    </div>
+    <div class="main" id="main"></div>
+</body>
+
+</html>
+<script type="text/html" id="tpl">
+
+    {{ each list value }}
+    <div class="content">
+        <a href="{{ value.url }}" class="pic"><img src="{{ value.img }}"></a>
+        <a href="{{ value.url }}" class="title">{{ value.title }}</a>
+    </div>
+    {{ /each }}
+
+</script>
+<script>
+    $.ajax({
+
+        url: "http://czdm.ittun.com/api/gettopics",
+        type: "get",
+        dataType: "json",
+        success: function (obj) {
+
+            var html = template("tpl", { list: obj });
+            $('#main').html(html);
+
+        }
+
+    })
+
+</script>

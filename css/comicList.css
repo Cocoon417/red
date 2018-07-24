@@ -1,0 +1,121 @@
+/*初始化代码*/
+
+body,
+div,
+span,
+ul,
+ol,
+li,
+a,
+img,
+input,
+em,
+i,
+strong,
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0 none;
+	vertical-align: middle;
+}
+
+input {
+	border: 0 none;
+	outline: 0 none;
+}
+
+li {
+	list-style: none;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+	font-weight: normal;
+}
+
+body {
+    font: 12px/100% "微软雅黑";
+}
+
+/* 头部 */
+.header {
+    background: #fedb51;
+    width: 100%;
+    height: 34px; 
+    position: relative;
+}
+
+.header .back {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 34px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.header .title {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #d80c18;
+}
+
+/* 专题列表 */
+.main {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+    background: #eee;
+}
+
+.content {
+    width: 100%;
+    height: 152px;
+    background: #fff;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .pic {
+    flex-basis: 124px;
+}
+
+.content img {
+    width: 100%;
+    height: 124px;
+}
+
+.content .title {
+    color: #888;
+    box-sizing: border-box;
+    padding-left: 5px;
+    line-height: 26px;
+}
